@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <title>הסדנה לידע ציבורי</title>
+
+    <script defer src="/__/firebase/3.9.0/firebase-app.js"></script>
+    <script defer src="/__/firebase/3.9.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/3.9.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/init.js"></script>
+    <script defer src="./scripts/jquery-3.1.1.min.js"></script>
+    <script defer src="./scripts/bootstrap.min.js"></script>
+    <script defer src="./scripts/index.js"></script>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./css/main.css"/>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">הסדנה - רשם מתנדבים</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    שלום
+                    <span id="spanUserName"></span>
+                    <button id="btnLogout" class="btn btn-default">התנתק</button>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<form>
+    <div class="container">
+        <div class="form-group">
+            <label for="inputFirstName">שם פרטי</label>
+            <input type="text" class="form-control" id="inputFirstName">
+        </div>
+        <div class="form-group">
+            <label for="inputLastName">שם משפחה</label>
+            <input type="text" class="form-control" id="inputLastName">
+        </div>
+        <div class="form-group">
+            <label for="selectProject">פרוייקט</label>
+            <select class="form-control" id="selectProject">
+                <option value="oknesset">כנסת פתוחה</option>
+                <option value="kikar">כיכר המדינה</option>
+                <option value="obudget">מפתח התקציב</option>
+                <option value="opension">פנסיה פתוחה</option>
+                <option value="anyway">Anyway</option>
+                <option value="delib">Delib</option>
+                <option value="otrain">רכבת פתוחה</option>
+                <option value="obus">תחצ פתוחה</option>
+                <option value="omuni">תקציב מקומי פתוח</option>
+                <option value="LibWiki">LibWiki</option>
+                <option value="libentities">חילוץ ישויות</option>
+                <option value="libmap">מפה בזמן</option>
+                <option value="none" selected>עוד לא הצטרפתי לפרוייקט</option>
+                <option value="other">פרוייקט אחר</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="inputLinkedIn">פרופיל לינקדאין</label>
+            <input type="text" class="form-control" id="inputLinkedIn">
+        </div>
+        <div class="form-group">
+            <label for="inputMAC">כתובת MAC</label>
+            <input type="text" class="form-control" id="inputMAC">
+        </div>
+
+        <div class="form-group text-center">
+            <button id="btnSubmit" class="btn btn-primary">עדכון</button>
+        </div>
+    </div>
+</form>
+</body>
+</html>
