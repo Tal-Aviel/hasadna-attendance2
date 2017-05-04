@@ -1,12 +1,6 @@
 {
   "rules": {
-    ".read": false,
-    ".write": false,
-    "profiles": {
-      "$uid": {
-        ".write": "$uid === auth.uid",
-        ".read": "$uid === auth.uid"
-      }
-    }
+    ".read": "auth != null",
+    ".write": "auth != null"
   }
 }

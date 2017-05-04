@@ -9,11 +9,14 @@
     <script defer src="/__/firebase/3.9.0/firebase-database.js"></script>
     <script defer src="/__/firebase/init.js"></script>
     <script defer src="./scripts/jquery-3.1.1.min.js"></script>
+    <script defer src="./scripts/jquery-ui.min.js"></script>
     <script defer src="./scripts/bootstrap.min.js"></script>
-    <script defer src="./scripts/index.js"></script>
+
+    <script defer src="./scripts/admin.js"></script>
 
     <link rel="stylesheet" href="./css/bootstrap.min.css"/>
     <link rel="stylesheet" href="./css/main.css"/>
+    <link rel="stylesheet" href="./css/jquery-ui.min.css"/>
 </head>
 <body>
 
@@ -53,45 +56,20 @@
 </nav>
 
 <div class="container">
+    <h1>עדכון אירוע</h1>
+
+    <label>תאריך האירוע:</label>
+    <div id="datepicker"></div>
+
     <div class="form-group">
-        <label for="inputFirstName">שם פרטי</label>
-        <input type="text" class="form-control" id="inputFirstName">
-    </div>
-    <div class="form-group">
-        <label for="inputLastName">שם משפחה</label>
-        <input type="text" class="form-control" id="inputLastName">
-    </div>
-    <div class="form-group">
-        <label for="selectProject">פרוייקט</label>
-        <select class="form-control" id="selectProject">
-            <option value="oknesset">כנסת פתוחה</option>
-            <option value="kikar">כיכר המדינה</option>
-            <option value="obudget">מפתח התקציב</option>
-            <option value="opension">פנסיה פתוחה</option>
-            <option value="anyway">Anyway</option>
-            <option value="delib">Delib</option>
-            <option value="otrain">רכבת פתוחה</option>
-            <option value="obus">תחצ פתוחה</option>
-            <option value="omuni">תקציב מקומי פתוח</option>
-            <option value="LibWiki">LibWiki</option>
-            <option value="libentities">חילוץ ישויות</option>
-            <option value="libmap">מפה בזמן</option>
-            <option value="none" selected>עוד לא הצטרפתי לפרוייקט</option>
-            <option value="other">פרוייקט אחר</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <label for="inputLinkedIn">פרופיל לינקדאין</label>
-        <input type="text" class="form-control" id="inputLinkedIn">
-    </div>
-    <div class="form-group">
-        <label for="inputMAC">כתובת MAC</label>
-        <input type="text" class="form-control" id="inputMAC">
+        <label for="attendees">נוכחים</label>
+        <input class="form-control" id="attendees" />
     </div>
 
     <div class="form-group text-center">
         <button id="btnSubmit" class="btn btn-primary">עדכון</button>
     </div>
 </div>
+
 </body>
 </html>
