@@ -3,12 +3,15 @@
     ".read":false,
     ".write":false,
     "users": {
+      ".read": "auth.uid == 'FwcbtPDKcdbcHXJ3dkd2BrFgmy52' || auth.uid == '4i7VuyFczHdSCQb1LZaujRY2Wpw1'",
       "$email_id": {
         ".write": "data.child('uid').val() === auth.uid || data.child('uid').val() === null || auth.uid == 'FwcbtPDKcdbcHXJ3dkd2BrFgmy52' || auth.uid == '4i7VuyFczHdSCQb1LZaujRY2Wpw1'",
         ".read": "data.child('uid').val() === auth.uid || data.child('uid').val() === null || auth.uid == 'FwcbtPDKcdbcHXJ3dkd2BrFgmy52' || auth.uid == '4i7VuyFczHdSCQb1LZaujRY2Wpw1'"
       }
     },
     "attendance": {
+      ".read": "auth.uid == 'FwcbtPDKcdbcHXJ3dkd2BrFgmy52' || auth.uid == '4i7VuyFczHdSCQb1LZaujRY2Wpw1'",
+      ".write": "auth.uid == 'FwcbtPDKcdbcHXJ3dkd2BrFgmy52' || auth.uid == '4i7VuyFczHdSCQb1LZaujRY2Wpw1'",
       "$day": {
         "$email_id": {
           ".write": "root.child('users').child($email_id).child('uid').val() === auth.uid || auth.uid == 'FwcbtPDKcdbcHXJ3dkd2BrFgmy52' || auth.uid == '4i7VuyFczHdSCQb1LZaujRY2Wpw1'",
