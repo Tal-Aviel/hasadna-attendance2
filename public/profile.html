@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <title>הסדנה לידע ציבורי</title>
+
+    <script defer src="/__/firebase/3.9.0/firebase-app.js"></script>
+    <script defer src="/__/firebase/3.9.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/3.9.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/init.js"></script>
+    <script defer src="./scripts/jquery-3.1.1.min.js"></script>
+    <script defer src="./scripts/bootstrap.min.js"></script>
+    <script defer src="./scripts/register.js"></script>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./css/main.css"/>
+</head>
+<body>
+<form id="frm">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">הסדנה - רשם מתנדבים</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>הרשמה</h2>
+        <div class="form-group">
+            <label for="username">אימייל*</label>
+            <input type="text" required="required" class="form-control" id="username">
+        </div>
+        <div class="form-group">
+            <label for="password">סיסמה*</label>
+            <input type="password" required="required" class="form-control" id="password">
+        </div>
+        <div class="form-group">
+            <label for="firstName">שם פרטי</label>
+            <input type="text" class="form-control" id="firstName">
+        </div>
+        <div class="form-group">
+            <label for="lastName">שם משפחה</label>
+            <input type="text" class="form-control" id="lastName">
+        </div>
+        <div class="form-group">
+            <label for="project">פרוייקט</label>
+            <select class="form-control" id="project">
+                <option value="oknesset">כנסת פתוחה</option>
+                <option value="kikar">כיכר המדינה</option>
+                <option value="obudget">מפתח התקציב</option>
+                <option value="opension">פנסיה פתוחה</option>
+                <option value="anyway">Anyway</option>
+                <option value="delib">Delib</option>
+                <option value="otrain">רכבת פתוחה</option>
+                <option value="obus">תחצ פתוחה</option>
+                <option value="omuni">תקציב מקומי פתוח</option>
+                <option value="LibWiki">LibWiki</option>
+                <option value="libentities">חילוץ ישויות</option>
+                <option value="libmap">מפה בזמן</option>
+                <option value="none" selected>עוד לא הצטרפתי לפרוייקט</option>
+                <option value="other">פרוייקט אחר</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="linkedin">פרופיל לינקדאין</label>
+            <input type="text" class="form-control" id="linkedin">
+        </div>
+        <div class="form-group text-center">
+            <button id="btnSubmit" class="btn btn-primary">הרשמה</button>
+        </div>
+    </div>
+</form>
+</body>
+</html>

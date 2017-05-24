@@ -10,7 +10,7 @@
     <script defer src="/__/firebase/init.js"></script>
     <script defer src="./scripts/jquery-3.1.1.min.js"></script>
     <script defer src="./scripts/bootstrap.min.js"></script>
-    <script defer src="./scripts/index.js"></script>
+    <script defer src="./scripts/login.js"></script>
 
     <link rel="stylesheet" href="./css/bootstrap.min.css"/>
     <link rel="stylesheet" href="./css/main.css"/>
@@ -27,44 +27,36 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">הסדנה - רשם מתנדבים</a>
-        </div>
-
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    שלום
-                    <span id="spanUserName"></span>
-                    <a id="logout" href="#" style="display: inline;">[התנתק]</a>
-                </li>
-            </ul>
+            <a class="navbar-brand" href="/">הסדנה - רשם מתנדבים</a>
         </div>
     </div>
 </nav>
 
 <div class="container">
     <div class="row">
-
-        <h1>הסדנה לידע ציבורי</h1>
-
-        <div class="col-md-6">
-            <h2>סטטסטיקה</h2>
-בחודש זה נכחת ב-
-            <span id="monthAttendance">0</span>
-            מפגשים.<br />
-המפגש האחרון שנכחת בו היה בתאריך
-            <span id="lastAttendance">-</span>
+        <div class="col-md-5">
+            <h2>עדיין לא נרשמת?</h2>
+            <button class="btn btn-info" id="register">הרשמה</button>
+            <hr />
+            <img src="images/sign-in-with-google.png" style="cursor: pointer;" id="google-signin" width="200" title="Sign in with Google" />
         </div>
         <div class="col-md-5 col-md-offset-1">
-            <h2>רישום נוכחות</h2>
-            <button class="btn btn-primary" id="attend">לחץ כאן לרישום נוכחות היום</button>
-            <button class="btn btn-info" id="update-profile">עדכון פרופיל</button>
-        </div>
+            <h2>התחברות</h2>
+            <div class="form-group">
+                <label for="username">אימייל</label>
+                <input type="text" class="form-control" id="username">
+            </div>
+            <div class="form-group">
+                <label for="password">סיסמה</label>
+                <input type="password" class="form-control" id="password">
+            </div>
 
+            <div class="form-group text-center">
+                <button id="btnSubmit" class="btn btn-primary">התחבר</button>
+            </div>
+        </div>
     </div>
 </div>
-
 <div class="loading" id="loading">Loading...</div>
-
 </body>
 </html>

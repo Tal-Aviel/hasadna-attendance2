@@ -1,6 +1,26 @@
 {
   "rules": {
-    ".read": "auth != null",
-    ".write": "auth != null"
+    ".read":false,
+    ".write":false,
+    "users": {
+      "$email_id": {
+        ".write": "data.child('uid').val() === auth.uid || data.child('uid').val() === null || auth.uid == 'FwcbtPDKcdbcHXJ3dkd2BrFgmy52' || auth.uid == '4i7VuyFczHdSCQb1LZaujRY2Wpw1'",
+        ".read": "data.child('uid').val() === auth.uid || data.child('uid').val() === null || auth.uid == 'FwcbtPDKcdbcHXJ3dkd2BrFgmy52' || auth.uid == '4i7VuyFczHdSCQb1LZaujRY2Wpw1'"
+      }
+    },
+    "attendance": {
+      "$day": {
+        "$email_id": {
+          ".write": "root.child('users').child($email_id).child('uid').val() === auth.uid || auth.uid == 'FwcbtPDKcdbcHXJ3dkd2BrFgmy52' || auth.uid == '4i7VuyFczHdSCQb1LZaujRY2Wpw1'",
+          ".read": "auth.uid == 'FwcbtPDKcdbcHXJ3dkd2BrFgmy52' || auth.uid == '4i7VuyFczHdSCQb1LZaujRY2Wpw1'"
+        }
+      }
+    },
+    "macs" : {
+      "$email_id" : {
+        ".write" : "root.child('users').child($email_id).child('uid').val() === auth.uid || auth.uid == 'FwcbtPDKcdbcHXJ3dkd2BrFgmy52' || auth.uid == '4i7VuyFczHdSCQb1LZaujRY2Wpw1'",
+        ".read" : "auth.uid == 'FwcbtPDKcdbcHXJ3dkd2BrFgmy52' || auth.uid == '4i7VuyFczHdSCQb1LZaujRY2Wpw1'"
+      }
+    }
   }
 }

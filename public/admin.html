@@ -40,15 +40,15 @@
                     <span id="spanUserName"></span>
                 </li>
                 <!--<li class="dropdown">-->
-                    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"-->
-                       <!--aria-expanded="false">Dropdown <span class="caret"></span></a>-->
-                    <!--<ul class="dropdown-menu">-->
-                        <!--<li><a href="#">Action</a></li>-->
-                        <!--<li><a href="#">Another action</a></li>-->
-                        <!--<li><a href="#">Something else here</a></li>-->
-                        <!--<li role="separator" class="divider"></li>-->
-                        <!--<li><a href="#">Separated link</a></li>-->
-                    <!--</ul>-->
+                <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"-->
+                <!--aria-expanded="false">Dropdown <span class="caret"></span></a>-->
+                <!--<ul class="dropdown-menu">-->
+                <!--<li><a href="#">Action</a></li>-->
+                <!--<li><a href="#">Another action</a></li>-->
+                <!--<li><a href="#">Something else here</a></li>-->
+                <!--<li role="separator" class="divider"></li>-->
+                <!--<li><a href="#">Separated link</a></li>-->
+                <!--</ul>-->
                 <!--</li>-->
             </ul>
         </div>
@@ -58,12 +58,22 @@
 <div class="container">
     <h1>עדכון אירוע</h1>
 
-    <label>תאריך האירוע:</label>
-    <div id="datepicker"></div>
+    <div class="row">
 
-    <div class="form-group">
-        <label for="attendees">נוכחים</label>
-        <input class="form-control" id="attendees" />
+        <div class="col-md-3">
+            <label>תאריך האירוע:</label>
+            <div id="datepicker"></div>
+        </div>
+
+        <div class="col-md-8 col-md-offset-1">
+
+            <div class="form-group">
+                <label for="attendees">נוכחים</label>
+                <input class="form-control" id="attendees"/>
+                <div id="result"></div>
+            </div>
+        </div>
+
     </div>
 
     <div class="form-group text-center">

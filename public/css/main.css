@@ -7,3 +7,15 @@
     text-align: center;
     background: white;
 }
+
+.glyphicon-remove {
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: red;
+}
+
+.deleted {
+    color: red;
+    text-decoration: line-through;
+}
