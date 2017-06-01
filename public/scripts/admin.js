@@ -16,6 +16,7 @@
             firebase.auth().signInWithRedirect(provider);
         } else {
             currentUser = user;
+            console.log(currentUser);
             start();
         }
     });
@@ -53,7 +54,7 @@
             if (!users) return;
             let allUsers = [];
             for (let emailKey in users) {
-                let user = users[emailKey].profile;
+                let user = users[emailKey].profile || {firstName: '', lastName: ''};
                 let email = emailKey.replace(/,/g, '.');
                 allUsers.push(`${user.firstName} ${user.lastName} - ${email}`);
             }
@@ -114,7 +115,7 @@
     let p = firebase.database().ref('users').once('value').then(snapshot => {
         let users = snapshot.val();
         for (let emailKey in users) {
-            map[emailKey] = users[emailKey].profile;
+            map[emailKey] = users[emailKey].profile || {firstName: '', lastName: ''};
         }
         return map;
     });
